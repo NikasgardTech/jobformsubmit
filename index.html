@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application (Link Mode)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <form id="jobForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="41b944d7-03bb-4593-8984-a0ca5aa32bc4">
+            
+            <h2>Job Application <span>(Web)</span></h2>
+
+            <div class="row">
+                <div class="input-group">
+                    <label>First Name*</label>
+                    <input type="text" name="First Name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label>Last Name*</label>
+                    <input type="text" name="Last Name" placeholder="Last Name" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label>Email*</label>
+                    <input type="email" name="Email" placeholder="email@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Job*</label>
+                    <select name="Job Role" required>
+                        <option value="">-- Select a job --</option>
+                        <option value="Web Developer">Web Developer</option>
+                        <option value="UI/UX Designer">UI/UX Designer</option>
+                        <option value="Data Analyst">Data Analyst</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group full">
+                <label>Address*</label>
+                <textarea name="Address" rows="3" required></textarea>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label>City*</label>
+                    <input type="text" name="City" placeholder="Chennai" required>
+                </div>
+                <div class="input-group">
+                    <label>Pincode*</label>
+                    <input type="text" name="Pincode" placeholder="600001" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label>Date</label>
+                    <input type="date" name="Date">
+                </div>
+                <div class="input-group">
+                    <label>Google Drive CV Link*</label>
+                    <input type="url" name="CV_Drive_Link" placeholder="Paste Drive Link here" required>
+                    <small style="color: #666; font-size: 0.75rem; margin-top: 5px;">Make sure "Anyone with link" can view.</small>
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn">Apply Now</button>
+            <div id="result"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
